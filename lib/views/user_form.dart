@@ -3,16 +3,15 @@ import 'package:flutter_crud/models/user.dart';
 import 'package:flutter_crud/provider/users.dart';
 import 'package:provider/provider.dart';
 
+// ignore: use_key_in_widget_constructors
 class UserForm extends StatelessWidget {
   final _form = GlobalKey<FormState>();
   final Map<String, String> _formData = {};
   void _loadFormData(User user) {
-    if (user != null) {
-      _formData['id'] = user.id;
-      _formData['name'] = user.name;
-      _formData['email'] = user.email;
-      _formData['avatarUrl'] = user.avatarUrl;
-    }
+    _formData['id'] = user.id;
+    _formData['name'] = user.name;
+    _formData['email'] = user.email;
+    _formData['avatarUrl'] = user.avatarUrl;
   }
 
   @override
